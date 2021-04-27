@@ -28,3 +28,9 @@ steps:
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
     artifactName: 'myWebsiteName'
+    
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'bizspark-planetpearce-service-connection'
+    appName: 'planetpearce-pipeline-prototype'
+    package: $(System.DefaultWorkingDirectory)/**/*.zip
