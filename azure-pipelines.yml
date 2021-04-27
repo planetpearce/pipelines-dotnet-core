@@ -33,4 +33,4 @@ steps:
   inputs:
     azureSubscription: 'bizspark-planetpearce-service-connection'
     appName: 'planetpearce-pipeline-prototype'
-    package: $(System.DefaultWorkingDirectory)/**/*.zip
+    package: $(Build.ArtifactStagingDirectory)/**/*.zip
