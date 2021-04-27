@@ -27,10 +27,10 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
-    artifactName: 'planetpearce-pipeline-prototype'
+    artifactName: 'planetpearce-pilpeline-prototype'
     
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'bizspark-planetpearce-service-connection'
-    appName: 'planetpearce-pipeline-prototype'
+    appName: 'planetpearce-pilpeline-prototype'
     package: $(Build.ArtifactStagingDirectory)/**/*.zip
